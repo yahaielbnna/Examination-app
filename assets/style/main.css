@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    background: #f3f3f3f9;
+    font-family: Arial, Helvetica, sans-serif;
+}
