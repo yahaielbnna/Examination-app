@@ -17,7 +17,6 @@
     width: 50%
 }
 .page-container .illustration{
-    /* border-right: 1px solid #000; */
     position: relative;
 }
 .page-container .illustration::before{
@@ -29,4 +28,22 @@
     width: 1px;
     height: 60%;
     background: #5f5f5f;
+}
+.page-container .form{
+    padding: 0 0 0 20px;
+}
+.page-container .form p{
+    margin: 10px 0 15px 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.page-container input{
+    width: 100%;
+}
+form .double{
+    display: flex;
+    gap: 15px;
 }
