@@ -1,0 +1,38 @@
+Examination App
+
+--Features as a user:
+	1- Sign up ✔️
+	2- Login
+	3- Profile
+	4- Dashboard
+	5- exam page (Next - previous - Bookmark - Timer - Score)
+
+--Features as an admin:
+	1- Can edit the questions
+
+--Tools:
+	HTML
+	CSS
+	Pure JS
+
+--Methods
+	Local Storage
+        Interval
+	JSON
+	
+--------------------------------------------------------------------------
+JS: 
+لغة برمجة بتستخدم بشكل كبير في الويب .. و الفايدة منها إنها تخلي الموقع من مجرد صورة ثابتة أو عناصر ثابتة 
+لإنها تخلي الموقع متفاعل 
+Interactive website 
+
+الويب بشكل عام بيحتاج وجود ال HTML
+--------------------------------------------------------------------------
+
+DOM & BOM :
+
+- DOM: Document Object Model
+	إننا نقدر نوصل للعناصر اللي موجدة في الصفحة و نقدر نتحكم فيها أو نضيف عناصر
+- BOM: Browser Object Model
+	نقدر نوصل للخواص الخاصة بالمتصفح و نقدر إننا نخزن بيانات و نستخدمها
+
