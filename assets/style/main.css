@@ -37,3 +37,82 @@ a{
     color: #7e57c2;
     text-decoration: none;
 }
+ul{
+    list-style: none;
+}
+
+/*  */
+
+.card{
+    width: fit-content;
+    /* height: fit-content; */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 5px #00000030;
+    background: #fff;
+}
+.card .card-title{
+    font-size: 1.4rem;
+}
+.card .card-title~p{
+    margin: 10px 0;
+}
+
+/*  */
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-1{
+    width: calc((100% / 12)*1);
+}
+.col-2{
+    width: calc((100% / 12)*2);
+}
+.col-3{
+    width: calc((100% / 12)*3);
+}
+.col-4{
+    width: calc((100% / 12)*4);
+}
+.col-5{
+    width: calc((100% / 12)*5);
+}
+.col-6{
+    width: calc((100% / 12)*6);
+}
+.col-7{
+    width: calc((100% / 12)*7);
+}
+.col-8{
+    width: calc((100% / 12)*8);
+}
+.col-9{
+    width: calc((100% / 12)*9);
+}
+.col-10{
+    width: calc((100% / 12)*10);
+}
+.col-11{
+    width: calc((100% / 12)*11);
+}
+.col-12{
+    width: calc((100% / 12)*12);
+}
+
+.gap-1{
+    gap: 3px;
+}
+.gap-2{
+    gap: 5px;
+}
+.gap-3{
+    gap: 8px;
+}
+.gap-4{
+    gap: 10px;
+}
+.gap-5{
+    gap: 15px;
+}
