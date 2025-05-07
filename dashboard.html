@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="assets/style/main.css" />
     <link rel="stylesheet" href="assets/style/dashboard.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="superHero">
-        <div class="avatar">
-            <img src="assets/avatar/avatar.jpg">
-        </div>
-        <div class="text">
-            <h2>Welcome Back Natasha👋,</h2>
-            <p>Take a look at your last scores and start to create new achivments.</p>
-        </div>
+      <div class="avatar">
+        <img src="assets/avatar/avatar.jpg" />
+      </div>
+      <div class="text">
+        <h2>Welcome Back Natasha👋,</h2>
+        <p>
+          Take a look at your last scores and start to create new achivments.
+        </p>
+      </div>
     </div>
     <div class="row gap-5">
-        <div class="card subjects col-3">
+      <div class="card subjects col-3">
         <h3 class="card-title">Last scores</h3>
         <p>Last scores you have achived in your exames</p>
-            <ul>
-                <li>
-                    <h4>Information theary</h4>
-                    <span>8/10</span>
-                </li>
-                <li>
-                    <h4>Algorithm</h4>
-                    <span>7/10</span>
-                </li>
-                <li>
-                    <h4>ODE</h4>
-                    <span>7/10</span>
-                </li>
-                <li>
-                    <h4>Information theary</h4>
-                    <span>8/10</span>
-                </li>
-                <li>
-                    <h4>Algorithm</h4>
-                    <span>7/10</span>
-                </li>
-            </ul>
+        <ul>
+          <li>
+            <h4>Information theary</h4>
+            <span>8/10</span>
+          </li>
+          <li>
+            <h4>Algorithm</h4>
+            <span>7/10</span>
+          </li>
+          <li>
+            <h4>ODE</h4>
+            <span>7/10</span>
+          </li>
+          <li>
+            <h4>Information theary</h4>
+            <span>8/10</span>
+          </li>
+          <li>
+            <h4>Algorithm</h4>
+            <span>7/10</span>
+          </li>
+        </ul>
+      </div>
+      <div class="card col-3">
+        <h3 class="card-title">Subjects</h3>
+        <p>your subjects' scores</p>
+        <div id="chart"></div>
+      </div>
+      <div class="card col-5">
+        <h4 class="card-title">Choose your exam</h4>
+        <p>find out the exam that you'r want to take and test your self</p>
+
+        <div class="gap-5 grid">
+            <div class="exam-box">
+                <a href="#">
+                    <h5>Electornic business</h5>
+                    <p>7/5/2025</p>
+                </a>
+            </div>
+            <div class="exam-box">
+                <a href="#">
+                    <h5>Electornic business</h5>
+                    <p>7/5/2025</p>
+                </a>
+            </div>
+            <div class="exam-box">
+                <a href="#">
+                    <h5>Electornic business</h5>
+                    <p>7/5/2025</p>
+                </a>
+            </div>
+            <div class="exam-box">
+                <a href="#">
+                    <h5>Electornic business</h5>
+                    <p>7/5/2025</p>
+                </a>
+            </div>
+            <div class="exam-box">
+                <a href="#">
+                    <h5>Electornic business</h5>
+                    <p>7/5/2025</p>
+                </a>
+            </div>
         </div>
-        <div class="card col-3">
-            <h3 class="card-title">Subjects</h3>
-            <p>your subjects' scores</p>
-            <div id="chart"></div>
-        </div>
+      </div>
     </div>
     <script src="assets/script/apexcharts.js"></script>
     <script src="assets/script/charts.js"></script>
-
-</body>
+  </body>
 </html>

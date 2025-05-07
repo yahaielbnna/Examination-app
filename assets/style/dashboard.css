@@ -43,3 +43,33 @@ body{
     border-radius: 5px;
     color: #fff;
 }
+
+.exam-box{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    position: relative;
+}
+.exam-box::before{
+    content: ">";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-200%,-50%);
+    font-family: cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #606060;
+}
+.exam-box h5{
+    margin-bottom: 10px;
+}
+.exam-box a{
+    color: inherit;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
