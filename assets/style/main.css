@@ -41,6 +41,12 @@ ul{
     list-style: none;
 }
 
+hr{
+    border-width: 1px;
+    border-style: inset;
+    border-color: #00000030;
+    margin: 10px 0;
+}
 /*  */
 
 .card{

@@ -1,0 +1,77 @@
+nav,.menu{
+    width: 100%;
+    background: #fff;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 5px #0000001c;
+}
+nav .timer{
+    align-items: center;
+    gap: 10px;
+}
+.question-container{
+    padding: 10px 30px;
+}
+.question-container .question{
+    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+}
+.chooise{
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.chooise:hover{
+    box-shadow: 0 3px 5px #00000010;
+}
+.chooise:has(input:checked){
+    background: #7e57c2;
+    box-shadow: 0 3px 10px #7e57c26b;
+    color: #fff;
+}
+.chooise input[type="radio"]{
+    display: none;
+}
+.chooise label{
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.control{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.control button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 20px;
+}
+.control button p{
+    font-family: cursive;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.menu{
+    height: 100vh;
+    margin: 0;
+    overflow: auto;
+    position: relative;
+}
+.menu ul li{
+    padding: 15px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #00000030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
