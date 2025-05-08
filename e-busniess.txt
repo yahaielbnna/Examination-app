@@ -5,7 +5,7 @@ Examination App
 	2- Login ✔️
 	3- Profile
 	4- Dashboard (Student information✔️ - subjects✔️ - scores✔️ - Start Exam✔️)
-	5- exam page (Next - previous - Bookmark - Timer - Score)
+	5- exam page (Next✔️ - previous✔️ - Bookmark✔️ - Timer✔️ - Score)
 
 --Features as an admin:
 	1- Can edit the questions
