@@ -36,12 +36,11 @@ button:hover{
 a{
     color: #7e57c2;
     text-decoration: none;
-<<<<<<< Updated upstream
-=======
 }
 ul{
     list-style: none;
 }
+
 hr{
     border-width: 1px;
     border-style: inset;
@@ -122,5 +121,4 @@ hr{
 }
 .gap-5{
     gap: 15px;
->>>>>>> Stashed changes
 }
