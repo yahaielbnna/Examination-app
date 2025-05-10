@@ -1,0 +1,39 @@
+{
+  "ODE": [
+    {
+      "question": "What is the capital of France?",
+      "answers": ["Berlin", "Madrid", "Paris", "Rome"],
+      "correct": "Paris"
+    },
+    {
+      "question": "Which programming language is known for its snake logo?",
+      "answers": ["Java", "Python", "C++", "Ruby"],
+      "correct": "Python"
+    },
+    {
+      "question": "What is the smallest planet in our solar system?",
+      "answers": ["Mercury", "Mars", "Venus", "Earth"],
+      "correct": "Mercury"
+    },
+    {
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "answers": [
+        "Mark Twain",
+        "William Shakespeare",
+        "Jane Austen",
+        "Charles Dickens"
+      ],
+      "correct": "William Shakespeare"
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "answers": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "correct": "Pacific Ocean"
+    }
+  ]
+}

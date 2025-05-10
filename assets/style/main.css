@@ -1,124 +1,173 @@
-*{
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
-body{
-    background: #f3f3f3f9;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-input{
-    padding: 13px 15px;
-    border: 1px solid #5f5f5f;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-input:focus{
-    border-color: #7e57c2;
-    box-shadow: 0 2px 10px #7e57c26b;
+body {
+  background: #f3f3f3f9;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-button{
-    width: fit-content;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background: #7e57c2;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
+input {
+  padding: 13px 15px;
+  border: 1px solid #5f5f5f;
+  border-radius: 5px;
+  transition: 0.3s;
 }
-button:hover{
-    background: #975bff;
+input:focus {
+  border-color: #7e57c2;
+  box-shadow: 0 2px 10px #7e57c26b;
 }
-a{
-    color: #7e57c2;
-    text-decoration: none;
+input.error{
+  border: 1px solid #b71c1cde;
+  box-shadow: 0 2px 5px #b71c1c91;
+
 }
-ul{
-    list-style: none;
+img{
+  user-select: none;
 }
 
-hr{
-    border-width: 1px;
-    border-style: inset;
-    border-color: #00000030;
-    margin: 10px 0;
+button {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #7e57c2;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #975bff;
+}
+a {
+  color: #7e57c2;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+hr {
+  border-width: 1px;
+  border-style: inset;
+  border-color: #00000030;
+  margin: 10px 0;
 }
 /*  */
 
-.card{
-    width: fit-content;
-    /* height: fit-content; */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 3px 5px #00000030;
-    background: #fff;
+.card {
+  width: fit-content;
+  /* height: fit-content; */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 5px #00000030;
+  background: #fff;
 }
-.card .card-title{
-    font-size: 1.4rem;
+.card .card-title {
+  font-size: 1.4rem;
 }
-.card .card-title~p{
-    margin: 10px 0;
+.card .card-title ~ p {
+  margin: 10px 0;
 }
 
+.message {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.message p{
+  width: 100%;
+  transform: translate(calc(-100% - 10px), 10px);
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  /* opacity: 0.85; */
+  animation: showErrorMessage 0.3s ease-in;
+  user-select: none;
+  transition: 0.3s;
+}
+.message p.error_message{
+  box-shadow: 0 3px 7px #b71c1c64;
+  background: #b71c1cde;
+}
+.message p.success_message{
+  box-shadow: 0 3px 7px #1cb76a66;
+  background: #05974ede;
+}
+.message p:hover{
+  opacity: 1;
+}
+
+@keyframes showErrorMessage {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.85;
+  }
+}
 /*  */
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
-.col-1{
-    width: calc((100% / 12)*1);
+.col-1 {
+  width: calc((100% / 12) * 1);
 }
-.col-2{
-    width: calc((100% / 12)*2);
+.col-2 {
+  width: calc((100% / 12) * 2);
 }
-.col-3{
-    width: calc((100% / 12)*3);
+.col-3 {
+  width: calc((100% / 12) * 3);
 }
-.col-4{
-    width: calc((100% / 12)*4);
+.col-4 {
+  width: calc((100% / 12) * 4);
 }
-.col-5{
-    width: calc((100% / 12)*5);
+.col-5 {
+  width: calc((100% / 12) * 5);
 }
-.col-6{
-    width: calc((100% / 12)*6);
+.col-6 {
+  width: calc((100% / 12) * 6);
 }
-.col-7{
-    width: calc((100% / 12)*7);
+.col-7 {
+  width: calc((100% / 12) * 7);
 }
-.col-8{
-    width: calc((100% / 12)*8);
+.col-8 {
+  width: calc((100% / 12) * 8);
 }
-.col-9{
-    width: calc((100% / 12)*9);
+.col-9 {
+  width: calc((100% / 12) * 9);
 }
-.col-10{
-    width: calc((100% / 12)*10);
+.col-10 {
+  width: calc((100% / 12) * 10);
 }
-.col-11{
-    width: calc((100% / 12)*11);
+.col-11 {
+  width: calc((100% / 12) * 11);
 }
-.col-12{
-    width: calc((100% / 12)*12);
+.col-12 {
+  width: calc((100% / 12) * 12);
 }
 
-.gap-1{
-    gap: 3px;
+.gap-1 {
+  gap: 3px;
 }
-.gap-2{
-    gap: 5px;
+.gap-2 {
+  gap: 5px;
 }
-.gap-3{
-    gap: 8px;
+.gap-3 {
+  gap: 8px;
 }
-.gap-4{
-    gap: 10px;
+.gap-4 {
+  gap: 10px;
 }
-.gap-5{
-    gap: 15px;
+.gap-5 {
+  gap: 15px;
 }
