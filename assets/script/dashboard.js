@@ -4,6 +4,7 @@ import examModel from "./examModel.js"
 let user = auth.middelware(),
     savedExams = examModel.getSubmitedExam(user.id);
 
+
 // console.log(examModel.exams());
 
 document.getElementById('userName').innerText = user.user.first_name;
@@ -54,3 +55,30 @@ if (user.user.role == 'admin') {
         element.remove()
     });
 }
+
+let img = document.querySelector('img'),
+    file = document.querySelector('input[type="file"]');
+
+if (user.user.avatar) {
+    img.src = user.user.avatar;
+}
+
+img.addEventListener('click', e => {
+    file.click();
+})
+
+file.addEventListener('change', e => {
+    let fileRead = new FileReader();
+
+    fileRead.readAsDataURL(file.files[0])
+
+    fileRead.addEventListener('load', e => {
+        let url = fileRead.result;
+        auth.uploadAvatar(url);
+        img.src = url;
+    })
+})
+
+document.getElementById('logout').addEventListener('click', _ => {
+    auth.logout();
+})
