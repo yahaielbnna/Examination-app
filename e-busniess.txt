@@ -1,11 +1,11 @@
 Examination App
 
 --Features as a user:
-	1- Sign up ✔️
-	2- Login ✔️
+	1- Sign up ✔️✔️
+	2- Login ✔️✔️
 	3- Profile
-	4- Dashboard (Student information✔️ - subjects✔️ - scores✔️ - Start Exam✔️)
-	5- exam page (Next✔️ - previous✔️ - Bookmark✔️ - Timer✔️ - Score)
+	4- Dashboard (Student information✔️✔️ - subjects✔️✔️ - scores✔️✔️ - Start Exam✔️✔️)
+	5- exam page (Next✔️✔️ - previous✔️✔️ - Bookmark✔️✔️ - Timer✔️✔️ - Score✔️)
 
 --Features as an admin:
 	1- Can edit the questions✔️
