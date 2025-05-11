@@ -27,6 +27,7 @@ function timerFunction() {
         }
     } else {
         clearInterval(timer)
+        submitExam()
     }
 }
 
@@ -161,7 +162,8 @@ function cotnrolButtons() {
     }
 }
 
-submit.addEventListener('click', e => {
+submit.addEventListener('click', submitExam)
+function submitExam() {
     exam.questions.map(e => {
         TScore += e.score;
     })
@@ -170,5 +172,4 @@ submit.addEventListener('click', e => {
     TScore = 0;
 
     location.href = 'dashboard.html';
-
-})
+}
