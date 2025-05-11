@@ -8,88 +8,57 @@
     <link rel="stylesheet" href="assets/style/questions.css" />
   </head>
   <body>
-    <div class="exam-name">
-      <span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-chevron-left-icon lucide-chevron-left">
-          <path d="m15 18-6-6 6-6" />
-        </svg>
-      </span>
-      <input type="text" placeholder="Exam name" value="ODE" />
-    </div>
-    <div class="page">
-      <div class="question">
-        <input
-          type="text"
-          placeholder="Question title"
-          value="Lorem ipsume que illura de flam utlir" />
-        <div class="grid">
-          <input type="text" class="card" placeholder="Answer 1" value="Yes" />
-          <input type="text" class="card" placeholder="Answer 2" value="No" />
-          <input
-            type="text"
-            class="card"
-            placeholder="Answer 3"
-            value="Maybe" />
-          <input
-            type="text"
-            class="card"
-            placeholder="Answer 4"
-            value="Absolutely" />
-        </div>
+    <form name="exam">
+      <div class="exam-name">
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-chevron-left-icon lucide-chevron-left">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </span>
+        <input type="text" placeholder="Exam name" name="name" />
+        <input type="text" value="7/5/2025" name="date" />
       </div>
-      <div class="question">
-        <input
-          type="text"
-          placeholder="Question title"
-          value="Lorem ipsume que illura de flam utlir" />
-        <div class="grid">
-          <input type="text" class="card" placeholder="Answer 1" value="Yes" />
-          <input type="text" class="card" placeholder="Answer 2" value="No" />
+      <div class="page">
+        <!-- <div class="question">
           <input
             type="text"
-            class="card"
-            placeholder="Answer 3"
-            value="Maybe" />
-          <input
-            type="text"
-            class="card"
-            placeholder="Answer 4"
-            value="Absolutely" />
-        </div>
+            placeholder="Question title"
+            value="Lorem ipsume que illura de flam utlir" />
+          <div class="grid">
+            <div class="input-container">
+              <input type="radio" />
+              <input type="text" placeholder="Answer 1" value="Yes" />
+            </div>
+            <div class="input-container">
+              <input type="radio" />
+              <input type="text" placeholder="Answer 1" value="Yes" />
+            </div>
+            <div class="input-container">
+              <input type="radio" />
+              <input type="text" placeholder="Answer 1" value="Yes" />
+            </div>
+            <div class="input-container">
+              <input type="radio" />
+              <input type="text" placeholder="Answer 1" value="Yes" />
+            </div>
+          </div>
+        </div> -->
       </div>
-      <div class="question">
-        <input
-          type="text"
-          placeholder="Question title"
-          value="Lorem ipsume que illura de flam utlir" />
-        <div class="grid">
-          <input type="text" class="card" placeholder="Answer 1" value="Yes" />
-          <input type="text" class="card" placeholder="Answer 2" value="No" />
-          <input
-            type="text"
-            class="card"
-            placeholder="Answer 3"
-            value="Maybe" />
-          <input
-            type="text"
-            class="card"
-            placeholder="Answer 4"
-            value="Absolutely" />
-        </div>
+      <div style="padding: 10px 50px">
+        <button type="button" id="addQuestion">Add Question</button>
+        <button type="submit">Save</button>
       </div>
-    </div>
-    <div style="padding: 10px 50px;">
-      <button>Add Question</button>
-    </div>
+    </form>
+    <script type="module" src="assets/script/examEdit.js"></script>
   </body>
 </html>

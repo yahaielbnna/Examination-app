@@ -15,6 +15,7 @@ let nextBtn = document.getElementById('Next'),
     submit = document.getElementById('Submit');
 
 document.querySelector('.exam-name').innerText = exam.name;
+document.title = exam.name;
 
 let timer = setInterval(timerFunction, 1000)
 function timerFunction() {

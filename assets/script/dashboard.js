@@ -22,7 +22,7 @@ for (const exam of examModel.exams()) {
     ahref.append(examDate);
 
     examBox.classList.add('exam-box');
-    ahref.href = `exam.html?id=${exam.id}`
+    user.user.role == 'admin' ? ahref.href = `questions.html?id=${exam.id}` : ahref.href = `exam.html?id=${exam.id}`;
     examName.innerText = exam.name;
     examDate.innerText = exam.date;
 }
@@ -42,7 +42,15 @@ function scoresItem(name, score) {
     h4.innerText = name;
     span.innerText = score;
 }
+if (savedExams) {
+    savedExams.map(e => {
+        scoresItem(e.name, `${e.score}/${e.questions.length}`)
+    })
+}
 
-savedExams.map(e => {
-    scoresItem(e.name, `${e.score}/${e.questions.length}`)
-})
+if (user.user.role == 'admin') {
+    let labeledUser = document.querySelectorAll('[data-label="user"]');
+    labeledUser.forEach(element => {
+        element.remove()
+    });
+}
