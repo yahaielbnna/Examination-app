@@ -1,7 +1,8 @@
 import auth from "./auth.js";
 import examModel from "./examModel.js"
 
-let user = auth.middelware();
+let user = auth.middelware(),
+    savedExams = examModel.getSubmitedExam(user.id);
 
 // console.log(examModel.exams());
 
@@ -25,3 +26,23 @@ for (const exam of examModel.exams()) {
     examName.innerText = exam.name;
     examDate.innerText = exam.date;
 }
+
+let lastScores = document.getElementById('lastScores');
+
+function scoresItem(name, score) {
+    let li = document.createElement('li'),
+        h4 = document.createElement('h4'),
+        span = document.createElement('span');
+
+    lastScores.appendChild(li);
+
+    li.appendChild(h4);
+    li.appendChild(span);
+
+    h4.innerText = name;
+    span.innerText = score;
+}
+
+savedExams.map(e => {
+    scoresItem(e.name, `${e.score}/${e.questions.length}`)
+})

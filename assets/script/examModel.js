@@ -17,12 +17,15 @@ var examModel = {
     },
     getExam: id => {
         let exam = exams.filter(e => e.id == id)[0];
-        return exam;
+        if (exam) {
+            return exam;
+        } else {
+            location.href = 'dashboard.html'
+        }
     },
     submitExam: (exam, userID) => {
         let submited = localStorage.getItem('submited'),
             saved = {};
-        // console.log();
         if (submited) {
             saved = JSON.parse(submited);
         }
@@ -40,12 +43,17 @@ var examModel = {
             let index = saved[userID].indexOf(isExam);
             saved[userID][index] = exam;
         }
-
-
         localStorage.setItem('submited', JSON.stringify(saved))
-
-
-
+    },
+    getSubmitedExam: (userID) => {
+        let submited = localStorage.getItem('submited'),
+            saved = {};
+        if (submited) {
+            saved = JSON.parse(submited);
+        }
+        if (saved[userID]) {
+            return saved[userID];
+        }
     }
 }
 export default examModel;

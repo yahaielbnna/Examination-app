@@ -1,5 +1,20 @@
+import examModel from "./examModel.js"
+import auth from "./auth.js";
+
+let user = auth.middelware(),
+    savedExams = examModel.getSubmitedExam(user.id);
+
+let subjects_name = savedExams.map(e => {
+    return e.name;
+}),
+    subjects_score = savedExams.map(e => {
+        return Math.round((e.score / e.questions.length)*100);
+})
+// console.log(subjects);
+
+
 var options = {
-    series: [76, 67, 61, 90],
+    series: subjects_score,
     chart: {
         height: 390,
         type: 'radialBar',
@@ -34,8 +49,8 @@ var options = {
             },
         }
     },
-    colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
-    labels: ['Vimeo', 'Messenger', 'Facebook', 'LinkedIn'],
+    // colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
+    labels: subjects_name,
     responsive: [{
         breakpoint: 480,
         options: {
