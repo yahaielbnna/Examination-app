@@ -4,6 +4,7 @@ import examModel from "./examModel.js"
 let user = auth.middelware(),
     savedExams = examModel.getSubmitedExam(user.id);
 
+
 // console.log(examModel.exams());
 
 document.getElementById('userName').innerText = user.user.first_name;
@@ -22,7 +23,7 @@ for (const exam of examModel.exams()) {
     ahref.append(examDate);
 
     examBox.classList.add('exam-box');
-    ahref.href = `exam.html?id=${exam.id}`
+    user.user.role == 'admin' ? ahref.href = `questions.html?id=${exam.id}` : ahref.href = `exam.html?id=${exam.id}`;
     examName.innerText = exam.name;
     examDate.innerText = exam.date;
 }
@@ -42,7 +43,42 @@ function scoresItem(name, score) {
     h4.innerText = name;
     span.innerText = score;
 }
+if (savedExams) {
+    savedExams.map(e => {
+        scoresItem(e.name, `${e.score}/${e.questions.length}`)
+    })
+}
 
-savedExams.map(e => {
-    scoresItem(e.name, `${e.score}/${e.questions.length}`)
+if (user.user.role == 'admin') {
+    let labeledUser = document.querySelectorAll('[data-label="user"]');
+    labeledUser.forEach(element => {
+        element.remove()
+    });
+}
+
+let img = document.querySelector('img'),
+    file = document.querySelector('input[type="file"]');
+
+if (user.user.avatar) {
+    img.src = user.user.avatar;
+}
+
+img.addEventListener('click', e => {
+    file.click();
+})
+
+file.addEventListener('change', e => {
+    let fileRead = new FileReader();
+
+    fileRead.readAsDataURL(file.files[0])
+
+    fileRead.addEventListener('load', e => {
+        let url = fileRead.result;
+        auth.uploadAvatar(url);
+        img.src = url;
+    })
+})
+
+document.getElementById('logout').addEventListener('click', _ => {
+    auth.logout();
 })

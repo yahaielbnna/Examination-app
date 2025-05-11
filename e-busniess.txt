@@ -8,7 +8,11 @@ Examination App
 	5- exam page (Next✔️✔️ - previous✔️✔️ - Bookmark✔️✔️ - Timer✔️✔️ - Score✔️)
 
 --Features as an admin:
-	1- Can edit the questions✔️
+	1- Can edit the questions✔️✔️
+
+--Extra:
+	1- logout ✔️✔️
+	2- Upload avatar ✔️✔️
 
 --Tools:
 	HTML

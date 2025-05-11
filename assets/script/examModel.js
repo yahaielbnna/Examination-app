@@ -20,7 +20,9 @@ var examModel = {
         if (exam) {
             return exam;
         } else {
-            location.href = 'dashboard.html'
+            if (id != 'new') {
+                location.href = 'dashboard.html'
+            }
         }
     },
     submitExam: (exam, userID) => {
@@ -54,6 +56,21 @@ var examModel = {
         if (saved[userID]) {
             return saved[userID];
         }
-    }
+    },
+    saveExam: (id, exam) => {
+        let Eexam = exams.filter(e => e.id == id)[0],
+            index = exams.indexOf(Eexam);
+        exams[index] = exam;
+        localStorage.setItem("exams", JSON.stringify(exams))
+        location.href = 'dashboard.html'
+
+    },
+    storeExam: (exam) => {
+        exam.id = (exams.length + 1);
+        exams.push(exam);
+        localStorage.setItem("exams", JSON.stringify(exams))
+        location.href = 'dashboard.html'
+
+    },
 }
 export default examModel;

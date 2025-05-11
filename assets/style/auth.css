@@ -52,3 +52,23 @@ form .double{
     display: flex;
     gap: 15px;
 }
+.radioInput{
+    width: 100%;
+}
+.radioInput label{
+    width: 100%;
+    padding: 20px 10px;
+    background: #fff;
+    box-shadow: 0 5px 8px #5f5f5f1f;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.radioInput input{
+    display: none;
+}
+.radioInput:has(input:checked) label{
+    background: #7e57c2;
+    color: #fff;
+}

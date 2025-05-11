@@ -82,6 +82,19 @@ var auth = {
         } else {
             location.href = 'login.html';
         }
+    },
+    uploadAvatar: (url) => {
+        let user = users.filter(e => e.id == localStorage.getItem('id'))[0],
+            index = users.indexOf(user);
+        user.avatar = url;
+        localStorage.setItem('user', JSON.stringify(user));
+        users[index] = user;
+        localStorage.setItem("users", JSON.stringify(users))
+    },
+    logout: () => {
+        localStorage.removeItem('user');
+        localStorage.removeItem('id');
+        location.href = 'login.html';
     }
 }
 export default auth;

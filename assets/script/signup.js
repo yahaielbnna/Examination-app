@@ -10,7 +10,9 @@ form.addEventListener('submit', e => {
     const formValues = Object.fromEntries(formData.entries());
 
     for (const [name, value] of Object.entries(formValues)) {
+        if (typeof form[name] != 'object') {
             form[name].classList.remove('error')
+        }
         if (value == '') {
             auth.errorMessage(`Please fill ${name} input`)
             form[name].classList.add('error')
