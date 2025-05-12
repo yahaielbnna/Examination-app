@@ -12,6 +12,10 @@ document.getElementById('userName').innerText = user.user.first_name;
 let examsContainers = document.getElementById('examsContainers');
 
 for (const exam of examModel.exams()) {
+    ExamItems(exam.name,exam.date,exam.id)
+}
+
+function ExamItems(name, date, id, className=null) {
     let examBox = document.createElement('div'),
         ahref = document.createElement('a'),
         examName = document.createElement('h5'),
@@ -22,10 +26,14 @@ for (const exam of examModel.exams()) {
     ahref.append(examName);
     ahref.append(examDate);
 
-    examBox.classList.add('exam-box');
-    user.user.role == 'admin' ? ahref.href = `questions.html?id=${exam.id}` : ahref.href = `exam.html?id=${exam.id}`;
-    examName.innerText = exam.name;
-    examDate.innerText = exam.date;
+    examBox.classList.add('exam-box',className);
+    user.user.role == 'admin' ? ahref.href = `questions.html?id=${id}` : ahref.href = `exam.html?id=${id}`;
+    examName.innerText = name;
+    examDate.innerText = date;
+}
+
+if (user.user.role == 'admin') {
+    ExamItems('Add New','-','new','addNew')
 }
 
 let lastScores = document.getElementById('lastScores');

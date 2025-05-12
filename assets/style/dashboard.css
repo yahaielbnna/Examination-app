@@ -61,6 +61,21 @@ body{
     font-size: 30px;
     color: #606060;
 }
+.exam-box.addNew{
+    background: #7e57c2;
+    color: #fff;
+    padding: 20px;
+}
+.exam-box.addNew::before{
+    content: "+";
+    color: #fff;
+}
+.exam-box.addNew p{
+    display: none;
+}
+.exam-box.addNew h5{
+    margin: 0;
+}
 .exam-box h5{
     margin-bottom: 10px;
 }
